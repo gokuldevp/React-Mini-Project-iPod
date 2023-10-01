@@ -4,17 +4,20 @@ import prevIcon from './assets/images/prev.png'
 import playIcon from './assets/images/play.png'
 
 function Wheel(props) {
-  const {handleOpenMenu, handleCloseMenu} = props
+  const {handleOpenMenu, handleCloseMenu, handleNextIcon, handlePrevIcon} = props
 
   return (
   <div className="wheel-container">
           <div className="wheel">
-          <div 
+          <div
           id="home"
           onClick={() => handleCloseMenu()}
-          >Menu</div>
+          >Menu
+          </div>
 
-          <div id="next"> 
+          <div 
+          id="next"
+          onClick={() => handleNextIcon()}> 
           <img className='icon-img' src={nextIcon}/>
           </div>
 
@@ -23,7 +26,10 @@ function Wheel(props) {
           <img className='icon-img' src={playIcon}/>
           </div>
 
-          <div id="prev">
+          <div 
+          id="prev"
+          onClick={() => handlePrevIcon()}
+          >
           <img className='icon-img' src={prevIcon}/>
           </div>
 

@@ -2,14 +2,14 @@ import './assets/css/Screen.css'
 import Menu from './Menu';
 
 function Screen(props) {
-    const list_items = props.list_items;
-    const display = props.menu_display;
-
+    const menu = props.menu;
+    
     return(
         <div className='screen'>
-            {display ? <Menu list_items={list_items}/> : null}
+            {menu.menu_display ? <Menu menu={menu}/> : null}
         </div>
     );
 }
+
 
 export default Screen;

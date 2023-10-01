@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  width: 330px;
+  height: 660px;
+  background-color: lightgray;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {

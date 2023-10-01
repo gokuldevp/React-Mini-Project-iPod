@@ -19,7 +19,6 @@ body {
     position: relative;
     width: 300px; /* Adjust the size as needed */
     height: 300px; /* Adjust the size as needed */
-    background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,12 +42,14 @@ body {
     position: relative;
     top: -70px;
     right: -45px;
+    color: #8B4513;
+    font-size: large;
 }
 
 #play {
     position: relative;
     top: 70px;
-    right: 15px;
+    right: 20px;
 }
 
 #next {
@@ -58,7 +59,7 @@ body {
 
 #prev {
     position: relative;
-    right: 120px;
+    right: 125px;
 }
 
 .icon-img {

@@ -2,7 +2,7 @@ import './assets/css/Menu.css'
 import MenuItem from './MenuItem';
 
 function Menu(props) {
-    const items = props.list_items;
+    const menu = props.menu;
     
 
     return(
@@ -10,8 +10,13 @@ function Menu(props) {
             <h1>ipod.js</h1>
 
             <ul>
-                {items.map((item) => {
-                return <MenuItem item={item}/>
+                {menu.items.map((item, index) => {
+                return <
+                MenuItem 
+                item={item} 
+                menu={menu}
+                key={index}
+                />
                 })}
             </ul>
             

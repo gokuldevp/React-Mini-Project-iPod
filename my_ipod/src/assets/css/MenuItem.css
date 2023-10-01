@@ -1,5 +1,6 @@
 .item {
-    width: 150px;
+    width: 145px;
     padding-top: 20px;
     height: 60px;
+    border-radius: 10%;
 }

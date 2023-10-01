@@ -1,10 +1,20 @@
 import './assets/css/MenuItem.css'
 
 function MenuItem(props) {
-    const {item} = props
+    const item = props.item
+    const selectedItem = props.menu.items[props.menu.selected]
+
+    let style = {
+        backgroundColor: 'white'
+    }
+
+    if(item===selectedItem){
+        style.backgroundColor = 'blue'
+    }
+
     return(
-        <div className='item'>
-            <p>{item}</p>
+        <div className='item' style={style}>
+            <p >{item}</p>
         </div>
     );
 }
