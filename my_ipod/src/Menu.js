@@ -1,14 +1,16 @@
 import './assets/css/Menu.css'
 import MenuItem from './MenuItem';
 
-function Menu() {
-    const lst = ["Songs", "Albums", "Artists", "Playlist"]
+function Menu(props) {
+    const items = props.list_items;
+    
+
     return(
         <div className='menu'>
             <h1>ipod.js</h1>
 
             <ul>
-                {lst.map((item) => {
+                {items.map((item) => {
                 return <MenuItem item={item}/>
                 })}
             </ul>

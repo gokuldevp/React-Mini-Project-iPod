@@ -1,10 +1,13 @@
 import './assets/css/Screen.css'
 import Menu from './Menu';
 
-function Screen() {
+function Screen(props) {
+    const list_items = props.list_items;
+    const display = props.menu_display;
+
     return(
         <div className='screen'>
-            <Menu/>
+            {display ? <Menu list_items={list_items}/> : null}
         </div>
     );
 }
