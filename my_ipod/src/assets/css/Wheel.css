@@ -19,6 +19,10 @@ body {
     position: relative;
     width: 300px; /* Adjust the size as needed */
     height: 300px; /* Adjust the size as needed */
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Style for the wheel */
@@ -32,7 +36,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Add your wheel content styles here */
 }
 
 
@@ -56,6 +59,11 @@ body {
 #prev {
     position: relative;
     right: 120px;
+}
+
+.icon-img {
+    width: 30px;
+    height: 30px;
 }
 
 .center-btn {
