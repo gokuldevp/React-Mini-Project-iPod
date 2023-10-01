@@ -1,5 +1,7 @@
 .menu {
-    width: 50%;
+    width: 150px;
     height: 296px;
     background-color: white;
+    position: relative;
+    order: 3;
 }

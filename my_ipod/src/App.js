@@ -10,22 +10,23 @@ class App extends React.Component {
       heading:"Ipad.js",
       items: ["Music", "Games", "Settings"],
       menu_display: false,
-      selected: 0
+      selected: 0,
+      isPlay: false,
     }
   }
 
-
+  // Toggle play state or switch menu items
   handlePlay = () => {
     const itemsList = {
       "Music":["PlayMusic","Album", "Artists", "Songs"],
       "Games":["GTA","Snake", "Ball"],
-      "Settings":["Sound", "Display", "About", "Software update"]
+      "Settings":["Sound", "Display", "About", "Software update"],
     }
 
     this.setState((prevState) => {
       const selectedItem = prevState.items[prevState.selected]
-      if(selectedItem === "PlayMusic"){
-        console.log("PlayMusic");
+      if(selectedItem==="PlayMusic"){
+        this.setState({isPlay: !prevState.isPlay, heading:selectedItem})
         return;
       } else if (!prevState.items) {
         return {items:[], heading: selectedItem}
@@ -33,19 +34,19 @@ class App extends React.Component {
         return {items:itemsList[selectedItem], heading: selectedItem}
       }
     })
-
   }
 
-
+  // Open the menu
   handleOpenMenu = () => {
     this.setState({menu_display: true, selected: 0, items:["Music", "Games", "Settings"], heading:"Ipad.js"})
   }
 
+  // Close the menu
   handleCloseMenu = () => {
     this.setState({menu_display: false})
   }
 
-
+  // Navigate to the next menu item
   handleNextIcon = () => {
     this.setState((prevState) => {
       if (prevState.menu_display) {
@@ -58,6 +59,7 @@ class App extends React.Component {
     });
   }
 
+  // Navigate to the previous menu item
   handlePrevIcon = () => {
     this.setState((prevState) => {
       if (prevState.menu_display) {
@@ -74,11 +76,9 @@ class App extends React.Component {
     const menu = this.state;
     return (
       <div className="App">
-
         <Screen
         menu = {menu}
         />
-
         <Wheel
         handleOpenMenu={this.handleOpenMenu}
         handleCloseMenu={this.handleCloseMenu}
@@ -89,7 +89,6 @@ class App extends React.Component {
       </div>
     );
   }
-  }
-
+}
 
 export default App;

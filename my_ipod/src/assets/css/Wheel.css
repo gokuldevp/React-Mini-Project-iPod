@@ -1,11 +1,9 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Center the wheel container */
 body {
     display: flex;
     justify-content: center;
@@ -14,17 +12,15 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Style for the wheel container */
 .wheel-container {
     position: relative;
-    width: 300px; /* Adjust the size as needed */
-    height: 300px; /* Adjust the size as needed */
+    width: 300px;
+    height: 300px; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Style for the wheel */
 .wheel {
     width: 200px;
     height: 200px;
