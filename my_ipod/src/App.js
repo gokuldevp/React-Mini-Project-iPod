@@ -7,6 +7,7 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
+      heading:"Ipad.js",
       items: ["Music", "Games", "Settings"],
       menu_display: false,
       selected: 0
@@ -14,9 +15,30 @@ class App extends React.Component {
   }
 
 
+  handlePlay = () => {
+    const itemsList = {
+      "Music":["PlayMusic","Album", "Artists", "Songs"],
+      "Games":["GTA","Snake", "Ball"],
+      "Settings":["Sound", "Display", "About", "Software update"]
+    }
+
+    this.setState((prevState) => {
+      const selectedItem = prevState.items[prevState.selected]
+      if(selectedItem === "PlayMusic"){
+        console.log("PlayMusic");
+        return;
+      } else if (!prevState.items) {
+        return {items:[], heading: selectedItem}
+      } else {
+        return {items:itemsList[selectedItem], heading: selectedItem}
+      }
+    })
+
+  }
+
 
   handleOpenMenu = () => {
-    this.setState({menu_display: true, selected: 0})
+    this.setState({menu_display: true, selected: 0, items:["Music", "Games", "Settings"], heading:"Ipad.js"})
   }
 
   handleCloseMenu = () => {
@@ -62,6 +84,7 @@ class App extends React.Component {
         handleCloseMenu={this.handleCloseMenu}
         handleNextIcon={this.handleNextIcon}
         handlePrevIcon={this.handlePrevIcon}
+        handlePlay={this.handlePlay}
         />
       </div>
     );
