@@ -1,0 +1,70 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center the wheel container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Style for the wheel container */
+.wheel-container {
+    position: relative;
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Adjust the size as needed */
+}
+
+/* Style for the wheel */
+.wheel {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add your wheel content styles here */
+}
+
+
+#home {
+    position: relative;
+    top: -70px;
+    right: -45px;
+}
+
+#play {
+    position: relative;
+    top: 70px;
+    right: 15px;
+}
+
+#next {
+    position: relative;
+    left: 80px;
+}
+
+#prev {
+    position: relative;
+    right: 120px;
+}
+
+.center-btn {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
